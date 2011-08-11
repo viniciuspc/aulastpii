@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+       Dado a sequência advinhe o próximo número
+       <table>
+            <tr>
+                <td>sequência:#{quizz.sequencia}</td>
+            </tr>
+            <tr>
+                <td>o próximo número é <h:inputText value="#{quizz.resposta}" /></td>
+            </tr>
+            <tr>
+                <td><h:commandButton value="enviar" /></td>
+            </tr>
+            <tr>
+                <td>seu score atual é: #{quizz.score}</td>
+            </tr>
+       </table>
+       </h:form>
+    </h:body>
+</html>
+
