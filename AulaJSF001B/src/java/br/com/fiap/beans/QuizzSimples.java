@@ -1,0 +1,43 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package br.com.fiap.beans;
+
+import java.util.ArrayList;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+/**
+ *
+ * @author eluquini
+ */
+@ManagedBean(name="quizz")
+@SessionScoped
+public class QuizzSimples {
+
+    private ArrayList<Problema> problemas = new ArrayList<Problema>();
+    private int score = 0;
+
+    public int getScore() {
+        return score;
+    }
+    public QuizzSimples(){
+        problemas.add(new Problema("{3,1,4,1}",5));
+        problemas.add(new Problema("{0,1,0,1}",0));
+
+    }
+
+    public String getSequencia(){
+        return problemas.get(0).getSequencia();
+    }
+
+    public String getResposta(){
+        return "";
+    }
+
+    public void setResposta(String resposta){
+        score++;
+    }
+}
