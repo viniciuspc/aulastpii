@@ -4,22 +4,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
-        <title>Welcome</title>
+        <title>Cadastro</title>
     </h:head>
     <h:body>
         <h:form>
-            <h3>Please enter your name and password.</h3>
+            <h3>Cadastro de usuário</h3>
             <table>
                 <tr>
-                    <td>Name:</td>
+                    <td>Nome:</td>
                     <td><h:inputText value="#{user.name}"/></td>
                 </tr>
                 <tr>
-                    <td>Password:</td>
+                    <td>Sobrenome:</td>
+                    <td><h:inputText value="#{user.sobrenome}"/></td>
+                </tr>
+                <tr>
+                    <td>CPF:</td>
+                    <td><h:inputText value="#{user.cpf}"/></td>
+                </tr>
+                <tr>
+                    <td>Nome da mãe:</td>
+                    <td><h:inputText value="#{user.nome_mae}"/></td>
+                </tr>
+                <tr>
+                    <td>Naturalidade:</td>
+                    <td><h:inputText value="#{user.naturalidade}"/></td>
+                </tr>
+                <tr>
+                    <td>Nascionalidade:</td>
+                    <td><h:inputText value="#{user.nascionalidade}"/></td>
+                </tr>
+                <tr>
+                    <td>Senha</td>
                     <td><h:inputSecret value="#{user.password}"/></td>
                 </tr>
             </table>
-            <p><h:commandButton value="Login" action="welcome"/></p>
+            <p><h:commandButton value="Cadastrar" action="welcome"/></p>
         </h:form>
     </h:body>
 </html>
