@@ -4,10 +4,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
     <h:head>
-        <title>Welcome</title>
+        <title>Bem vindo</title>
     </h:head>
     <h:body>
-        <h3>Welcome to JavaServer Faces, #{user.name}!</h3>
+        <h3>Bem-Vindo ao JavaServer Faces, #{user.name}!</h3>
+        <table>
+            <tr>
+                    <td>Sobrenome:</td>
+                    <td>#{user.sobrenome}</td>
+                </tr>
+                <tr>
+                    <td>CPF:</td>
+                    <td>#{user.cpf}</td>
+                </tr>
+                <tr>
+                    <td>Nome da mãe:</td>
+                    <td>#{user.nome_mae}</td>
+                </tr>
+                <tr>
+                    <td>Naturalidade:</td>
+                    <td>#{user.naturalidade}</td>
+                </tr>
+                <tr>
+                    <td>Nascionalidade:</td>
+                    <td>#{user.nascionalidade}</td>
+                </tr>
+            </table>
     </h:body>
 </html>
 
