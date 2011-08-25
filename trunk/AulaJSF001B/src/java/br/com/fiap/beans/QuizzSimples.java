@@ -29,6 +29,7 @@ public class QuizzSimples {
     public QuizzSimples(){
         problemas.add(new Problema("{3,1,4,1}",5));
         problemas.add(new Problema("{0,1,0,1}",0));
+        problemas.add(new Problema("(0,1,1,2,)", 3));
 
     }
 
