@@ -11,5 +11,10 @@
             <base-name>br.fiap.sistemaexemplo.util.internacionalizar.menssagen_de_erro</base-name>
             <var>msgs</var>
         </resource-bundle>
+
+        <locale-config>
+            <default-locale>pt-br</default-locale>
+            </locale-config>
     </application>
+
 </faces-config>
