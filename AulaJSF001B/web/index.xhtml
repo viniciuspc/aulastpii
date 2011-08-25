@@ -7,19 +7,19 @@
     </h:head>
     <h:body>
         <h:form>
-       Dado a sequência advinhe o próximo número
+            #{label.enunciado}
        <table>
             <tr>
-                <td>sequência:#{quizz.sequencia}</td>
+                <td>#{label.sequencia}#{quizz.sequencia}</td>
             </tr>
             <tr>
-                <td>o próximo número é <h:inputText value="#{quizz.resposta}" /></td>
+                <td>#{label.proximo} <h:inputText value="#{quizz.resposta}" /></td>
             </tr>
             <tr>
-                <td><h:commandButton value="enviar" /></td>
+                <td><h:commandButton value="#{label.enviar}" /></td>
             </tr>
             <tr>
-                <td>seu score atual é: #{quizz.score}</td>
+                <td>#{label.score} #{quizz.score}</td>
             </tr>
        </table>
        </h:form>
