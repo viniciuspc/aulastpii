@@ -44,4 +44,6 @@ public class MeuBackBean {
     public void setOpcoes(ArrayList<String> opcoes) {
         this.opcoes = opcoes;
     }
+
+    
 }
