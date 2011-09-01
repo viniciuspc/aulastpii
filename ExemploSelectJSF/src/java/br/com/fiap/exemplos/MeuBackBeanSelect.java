@@ -15,9 +15,9 @@ import javax.faces.bean.SessionScoped;
  */
 @ManagedBean(name="bean")
 @SessionScoped
-public class MeuBackBean {
+public class MeuBackBeanSelect {
 
-    public MeuBackBean(){
+    public MeuBackBeanSelect(){
         opcoes = new ArrayList<String>();
         opcoes.add("viagem");
         opcoes.add("futebol");
@@ -45,5 +45,19 @@ public class MeuBackBean {
         this.opcoes = opcoes;
     }
 
+    public String limparFormulario(){
+        escolha="";
+
+        return null;
+    }
+
+    public String VerificarFormulario(){
+        if(escolha.equals("cerveja")){
+            return "mostrarCervejas";
+        }
+        else{
+            return "ixixi";
+        }
+    }
     
 }
