@@ -14,7 +14,10 @@
                 <f:selectItems value="#{bean.opcoes}" />
             </h:selectOneListbox>
             </div>
-            <div><h:commandButton value="OK"/></div>
+            <div>
+                <h:commandButton value="OK" action="#{bean.VerificarFormulario}"/>
+                <h:commandButton value="Limpar" action="#{bean.limparFormulario}" />
+            </div>
             <div>Sua escolha foi: #{bean.escolha}</div>
         </h:form>
 
