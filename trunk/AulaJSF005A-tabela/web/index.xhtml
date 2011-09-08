@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="css/tabelas.css" />
+
+        <title>Tabelas</title>
+    </h:head>
+    <h:body>
+        <h:form>
+
+            <div>
+                <table>
+                    <tr>
+                        <td>Númerp:</td>
+                        <td><h:inputText value="#{listaPedidos.pedido.numero}" /></td>
+                    </tr>
+                    <tr >
+                        <td >Cliente:</td>
+                        <td ><h:inputText value="#{listaPedidos.pedido.cliente}" /></td>
+                    </tr>
+                    <tr >
+                        <td>Total:</td>
+                        <td><h:inputText value="#{listaPedidos.pedido.total}" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div><h:commandButton action="#{listaPedidos.adicionar}" value="Incluir" /> </div>
+
+
+            <div>&emsp;</div>
+            <div>
+                <h:dataTable var="pedido" value="#{listaPedidos.pedidos}"
+                             styleClass="tabela" headerClass="cabecalho-tabela"
+                             rowClasses="linha-par,linha-impar"
+                             footerClass="somatotal">
+                    <h:column>
+                        <f:facet name="header" >
+                            Número
+                        </f:facet>
+                        <h:outputText value="#{pedido.numero}" rendered="#{not listaPedidos.ativarEdicao(pedido)}"/>
+                        <h:inputText value="#{pedido.numero}" rendered="#{listaPedidos.ativarEdicao(pedido)}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header" >
+                            Cliente
+                        </f:facet>
+                        #{pedido.cliente}
+                    </h:column>
+                    <h:column>
+
+                        <f:facet name="header" >
+                            Total
+                        </f:facet>
+                        <f:facet name="footer" >
+                            10
+                        </f:facet>
+                        #{pedido.total}
+                    </h:column>
+                    <h:column>
+                        <h:commandLink action="#{listaPedidos.editar(pedido)}" rendered="#{not listaPedidos.ativarEdicao(pedido)}" >
+                            <h:graphicImage value="./img/Editar.gif"/>
+                        </h:commandLink>
+                        <h:panelGroup rendered="#{listaPedidos.ativarEdicao(pedido)}">
+                            <h:commandLink action="#{listaPedidos.salvar}">
+                                <h:graphicImage value="./img/salvar.jpg"/>
+                            </h:commandLink>
+                             <h:commandLink action="#{listaPedidos.salvar}">
+                                <h:graphicImage value="./img/cancel_f2.png"/>
+                            </h:commandLink>
+                        </h:panelGroup>
+                    </h:column>
+                </h:dataTable>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
