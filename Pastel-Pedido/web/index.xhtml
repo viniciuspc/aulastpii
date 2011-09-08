@@ -26,7 +26,12 @@
                     <h:column>${aux.preco}</h:column>
                 </h:dataTable>
             </div>
-            
+
+            <!-- Aqui o value será  !-->
+            <h:selectManyListbox value="#{formulario.pastel}">
+                <f:selectItems var="pastel" value="#{formulario.opcoesPastel}" itemLabel="#{pastel.nome}" itemValue="#{pastel}"/>
+            </h:selectManyListbox>
+
             <br/><br/>
             <h:commandButton value="Ok"/> <h:commandButton value="Limpar" action="#{formulario.Limpar}"/>
         </h:form>
