@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="css/tabelas.css" />
+        <title>Tabelas</title>
+    </h:head>
+    <h:body>
+        <div>
+            Exemplo de Tabela Simples
+        </div>
+        <div>
+            <h:dataTable var="pedido" value="#{listaPedidos.pedidos}"
+                         styleClass="tabela" headerClass="cabecalho-tabela"
+                         rowClasses="linha-par,linha-impar"
+                         footerClass="somatotal">
+                <h:column>
+                    <f:facet name="header" >
+                        Número
+                    </f:facet>
+                    #{pedido.numero}
+                </h:column>
+                <h:column>
+                    <f:facet name="header" >
+                        Cliente
+                    </f:facet>
+                    #{pedido.cliente}
+                </h:column>
+                <h:column>
+
+                    <f:facet name="header" >
+                        Total
+                    </f:facet>
+                    <f:facet name="footer" >
+                      10
+                    </f:facet>
+                    #{pedido.total}
+                </h:column>
+              
+            </h:dataTable>
+        </div>
+    </h:body>
+</html>
+
