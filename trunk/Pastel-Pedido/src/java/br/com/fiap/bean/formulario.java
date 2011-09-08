@@ -20,7 +20,7 @@ public class formulario {
 
     public formulario(){
         opcoesTipo = new ArrayList<String>();
-        opcoesSabor = new ArrayList<String>();
+        opcoesPastel = new ArrayList<pastel>();
         opcoesFonte = new ArrayList<String>();
 
         opcoesTipo.add("Professor");
@@ -30,13 +30,13 @@ public class formulario {
         opcoesFonte.add("Inimigos");
         opcoesFonte.add("Propaganda");
 
-        opcoesSabor.add("Queijo");
-        opcoesSabor.add("Carne");
-        opcoesSabor.add("Pizza");
-        opcoesSabor.add("Especial");
-        opcoesSabor.add("4 Queijos");
-        opcoesSabor.add("Frango");
-        opcoesSabor.add("Frango com Catupiry");
+        opcoesPastel.add(new pastel("Queijo",2.00));
+        opcoesPastel.add(new pastel("Carne",2.00));
+        opcoesPastel.add(new pastel("Pizza",2.00));
+        opcoesPastel.add(new pastel("Especial",3.00));
+        opcoesPastel.add(new pastel("4 Queijos",3.00));
+        opcoesPastel.add(new pastel("Frango",2.00));
+        opcoesPastel.add(new pastel("Frango com Catupiry",2.00));
     }
 
     private String nome;
@@ -45,7 +45,8 @@ public class formulario {
     private ArrayList<String> fonte;
     private ArrayList<String> opcoesFonte;
     private ArrayList<String> sabor;
-    private ArrayList<String> opcoesSabor;
+    private ArrayList<pastel> opcoesPastel;
+
 
     public ArrayList<String> getFonte() {
         return fonte;
@@ -71,12 +72,12 @@ public class formulario {
         this.opcoesFonte = opcoesFonte;
     }
 
-    public ArrayList<String> getOpcoesSabor() {
-        return opcoesSabor;
+    public ArrayList<pastel> getOpcoesPastel() {
+        return opcoesPastel;
     }
 
-    public void setOpcoesSabor(ArrayList<String> opcoesSabor) {
-        this.opcoesSabor = opcoesSabor;
+    public void setOpcoesPastel(ArrayList<pastel> opcoesSabor) {
+        this.opcoesPastel = opcoesSabor;
     }
 
     public ArrayList<String> getOpcoesTipo() {

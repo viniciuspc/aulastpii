@@ -19,10 +19,14 @@
                 <f:selectItems value="${formulario.opcoesFonte}"/>
             </h:selectManyCheckbox>
             <br/><br/>
-            Sabor:<br/>
-            <h:selectManyListbox value="${formulario.sabor}">
-                <f:selectItems value="${formulario.opcoesSabor}"/>
-            </h:selectManyListbox>
+            <div>
+                Sabor:<br/>
+                <h:dataTable var="aux" value="${formulario.opcoesPastel}">
+                    <h:column>${aux.nome}</h:column>
+                    <h:column>${aux.preco}</h:column>
+                </h:dataTable>
+            </div>
+            
             <br/><br/>
             <h:commandButton value="Ok"/> <h:commandButton value="Limpar" action="#{formulario.Limpar}"/>
         </h:form>
