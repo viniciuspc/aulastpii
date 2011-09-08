@@ -20,14 +20,23 @@
             </h:selectManyCheckbox>
             <br/><br/>
             <div>
-                Sabor:<br/>
                 <h:dataTable var="aux" value="${formulario.opcoesPastel}">
-                    <h:column>${aux.nome}</h:column>
-                    <h:column>${aux.preco}</h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            Sabor
+                        </f:facet>
+                        ${aux.nome}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            Preço
+                        </f:facet>
+                        ${aux.preco}
+                    </h:column>
                 </h:dataTable>
             </div>
-
-            <!-- Aqui o value será  !-->
+            <br/><br/>
+            <!-- Aqui o value será os itens que o usuário selecionará !-->
             <h:selectManyListbox value="#{formulario.pastel}">
                 <f:selectItems var="pastel" value="#{formulario.opcoesPastel}" itemLabel="#{pastel.nome}" itemValue="#{pastel}"/>
             </h:selectManyListbox>
