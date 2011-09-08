@@ -44,7 +44,7 @@ public class formulario {
     private ArrayList<String> opcoesTipo;
     private ArrayList<String> fonte;
     private ArrayList<String> opcoesFonte;
-    private ArrayList<String> sabor;
+    private ArrayList<pastel> pastel;
     private ArrayList<pastel> opcoesPastel;
 
 
@@ -88,12 +88,12 @@ public class formulario {
         this.opcoesTipo = opcoesTipo;
     }
 
-    public ArrayList<String> getSabor() {
-        return sabor;
+    public ArrayList<pastel> getPastel() {
+        return pastel;
     }
 
-    public void setSabor(ArrayList<String> sabor) {
-        this.sabor = sabor;
+    public void setPastel(ArrayList<pastel> pastel) {
+        this.pastel = pastel;
     }
 
     public String getTipo() {
@@ -108,7 +108,7 @@ public class formulario {
         nome = "";
         tipo = "";
         fonte.clear();
-        sabor.clear();
+        pastel.clear();
     }
     
 }
