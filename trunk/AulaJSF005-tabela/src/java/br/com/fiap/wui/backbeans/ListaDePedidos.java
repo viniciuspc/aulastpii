@@ -14,13 +14,33 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class ListaDePedidos {
 
+    private Pedido p = new Pedido();
+    
     private ArrayList<Pedido> pedidos;
 
     public ArrayList<Pedido> getPedidos() {
         return pedidos;
     }
 
-    
+    public Pedido getP() {
+        return p;
+    }
+
+    public void setP(Pedido p) {
+        this.p = p;
+    }
+
+    /**
+     *
+     *
+     * @return A String que ira indicar para que página será redirecionado isso é configurado no faces.config
+     */
+    public String adicionar(){
+        pedidos.add(p);
+        p=new Pedido();
+        return null;
+    }
+
     public ListaDePedidos(){
         pedidos = new ArrayList<Pedido>();
         Pedido p1 = new Pedido();

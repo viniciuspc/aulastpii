@@ -8,6 +8,7 @@ package br.com.fiap.beans;
  *
  * @author eluquim
  */
+
 public class Pedido {
 
     String numero;

@@ -12,6 +12,17 @@
             Exemplo de Tabela Simples
         </div>
         <div>
+        <h:form>
+        
+            Número: <h:inputText value="#{listaPedidos.p.numero}"/><br></br>
+            Cliente: <h:inputText value="#{listaPedidos.p.cliente}"/><br></br>
+            Total: <h:inputText value="#{listaPedidos.p.total}"/><br></br>
+            <h:commandButton value="Inserir" action="#{listaPedidos.adicionar}"/><br></br>
+
+        
+        </h:form>
+        </div>
+        <div>
             <h:dataTable var="pedido" value="#{listaPedidos.pedidos}"
                          styleClass="tabela" headerClass="cabecalho-tabela"
                          rowClasses="linha-par,linha-impar"
