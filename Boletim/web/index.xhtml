@@ -16,23 +16,32 @@
             </h:form>
         </div>
         <div>
-            <h:dataTable var="alunos" value="#{listaAlunos.listaAlunos}" border="1">
-                <h:column>
-                    <f:facet name="header">Nome</f:facet>
-                    #{alunos.nome}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Sobrenome</f:facet>
-                    #{alunos.sobrenome}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Nota</f:facet>
-                    #{alunos.nota}
-                </h:column>
-                <h:column>
-                    
-                </h:column>
-            </h:dataTable>
+            <h:form>
+                <h:dataTable var="aluno" value="#{listaAlunos.listaAlunos}" border="1">
+                    <h:column>
+                        <f:facet name="header">Nome</f:facet>
+                        #{aluno.nome}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Sobrenome</f:facet>
+                        #{aluno.sobrenome}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Nota</f:facet>
+                        #{aluno.nota}
+                    </h:column>
+                    <h:column>
+                        <h:commandLink action="#{listaAlunos.aumentaNota(aluno)}">
+                            <h:graphicImage value="./img/seta_cima.png" width="20" height="20"/>
+                        </h:commandLink>
+                    </h:column>
+                    <h:column>
+                        <h:commandLink action="#{listaAlunos.excluir(aluno)}">
+                            <h:graphicImage value="./img/excluir.gif" width="20" height="20"/>
+                        </h:commandLink>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
         </div>
     </h:body>
 </html>

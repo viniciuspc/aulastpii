@@ -43,6 +43,20 @@ public class ListaAlunos {
         return null;
     }
 
+    public String aumentaNota(Aluno aluno){
+        double nota = aluno.getNota();
+        if(nota<10){
+            nota += 1;
+            aluno.setNota(nota);
+        }
+        return null;
+    }
+
+    public String excluir(Aluno aluno){
+        listaAlunos.remove(aluno);
+        return null;
+    }
+
 
 
 }
