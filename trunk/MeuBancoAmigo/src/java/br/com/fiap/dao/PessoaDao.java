@@ -9,8 +9,7 @@ import br.com.fiap.beans.Pessoa;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -22,9 +21,12 @@ public class PessoaDao {
         Connection conexao = null;
         try {
             conexao = gerenciador.obterConexao();
-            String sql = "insert into(id,nome) values(?,?)";
+            String sql = "insert into pessoa (id,nome) values(?,?)";
             PreparedStatement executorComandosSql = conexao.prepareStatement(sql);
-            executorComandosSql.setInt(1, pessoa);
+            executorComandosSql.setInt(1, pessoa.getId());
+            executorComandosSql.setString(2, pessoa.getNome());
+            executorComandosSql.executeUpdate();
+
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         } finally{
