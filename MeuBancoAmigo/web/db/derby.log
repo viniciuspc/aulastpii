@@ -1,0 +1,18 @@
+Apache Derby Servidor de Rede - 10.4.2.1 - (706043) iniciado e pronto para aceitar conexões na porta 1527 em 2011-09-29 11:42:20.882 GMT
+----------------------------------------------------------------
+2011-09-29 11:42:21.382 GMT:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instância a816c00e-0132-b4fe-0ba9-ffffb65a03d6
+no diretório de banco de dados C:\Documents and Settings\rm61828\My Documents\NetBeansProjects\MeuBancoAmigo\web\db\teste 
+
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+
+2011-09-29 11:42:26.304 GMT:
+Encerrando a instância a816c00e-0132-b4fe-0ba9-ffffb65a03d6
+----------------------------------------------------------------
+2011-09-29 11:42:26.335 GMT Thread[DRDAConnThread_3,5,main] (DATABASE = teste), (DRDAID = {2}), Banco de dados 'teste' fechado.
+----------------------------------------------------------------
+2011-09-29 11:44:11.021 GMT:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.4.2.1 - (706043): instância 629f8094-0132-b4fe-0ba9-ffffb65a03d6
+no diretório de banco de dados C:\Documents and Settings\rm61828\My Documents\NetBeansProjects\MeuBancoAmigo\web\db\teste 
+
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
