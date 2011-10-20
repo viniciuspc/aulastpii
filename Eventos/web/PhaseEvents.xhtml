@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid id="date" columns="2">
+                <f:event type="postValidate" listener="#{bb.validateDate}"/>
+                Dia:
+                <h:inputText value="#{bb.dia}" size="2" required="true" id="dia"/>
+                <br/>
+
+                Mês:
+                <h:inputText value="#{bb.mes}" size="2" required="true" id="mes" />
+                <br/>
+
+                Ano:
+                <h:inputText value="#{bb.ano}" size="4" required="4" id="ano"/>
+            </h:panelGrid>
+            <h:button value="ok"/>
+        </h:form>
+    </h:body>
+</html>
+
