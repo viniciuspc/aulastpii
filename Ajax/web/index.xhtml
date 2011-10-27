@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Ajax</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            Usuario: 
+            <h:inputText id="nome" value="#{usuario.nome}" validator="#{usuario.validarNome}">
+                <f:ajax event="keyup" render="msgerro" />
+            </h:inputText>
+            <h:message id="msgerro" for="nome" style="color : red"/>
+            <br/>
+            Usuario:
+            <h:inputText id="nome2" value="#{usuario.nome}" validator="#{usuario.validarNome}">
+                <f:ajax event="blur" render="msgerro2" />
+            </h:inputText>
+            <h:message id="msgerro2" for="nome2" style="color : red"/>
+            <br/>
+            <h:button value="Enviar" >
+                
+            </h:button>
+        </h:form>
+    </h:body>
+</html>
+
